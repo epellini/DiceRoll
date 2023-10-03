@@ -1,10 +1,15 @@
 package com.enrico.diceroll;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.os.Handler;
+import android.window.SplashScreen;
+
 public class MainActivity extends AppCompatActivity {
     private Button btnRollDice;
     public static final String EXTRA_TEXT = "com.enrico.diceroll.EXTRA_TEXT";
@@ -13,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         btnRollDice = (Button) findViewById(R.id.btnDice);
 
         btnRollDice.setOnClickListener(new View.OnClickListener() {
